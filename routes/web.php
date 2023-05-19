@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,5 @@ Route::get('/role/modifier/{id}', [RoleController::class, 'form_modifier'])->nam
 Route::post('/role/modifier/post', [RoleController::class, 'form_modifier_post'])->name('modifier_role_post');
 
 Route::get('/role/supprimer/{id}', [RoleController::class, 'form_supprimer']);
+
+Route::get('/register', [AuthController::class, 'form_register']);
